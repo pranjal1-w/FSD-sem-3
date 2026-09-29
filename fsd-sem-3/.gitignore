@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+
+# Dependencies
+node_modules/
+**/node_modules/
+node_modules_backup/
+=======
+node_modules/
+>>>>>>> origin/main

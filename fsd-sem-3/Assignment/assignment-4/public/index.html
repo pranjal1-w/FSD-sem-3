@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Request Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">🎓</div>
+                <div>
+                    <h2>Campus</h2>
+                    <span>Request Hub</span>
+                </div>
+            </div>
+
+            <nav>
+                <a class="active">🏠 Dashboard</a>
+                <a>📋 My Requests</a>
+                <a>⚡ Priority</a>
+                <a>✅ Resolved</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Campus Support</p>
+                <small>Submit your problem<br>and get it resolved.</small>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <header>
+
+                <div>
+                    <p class="welcome">CAMPUS SUPPORT</p>
+                    <h1>Request Dashboard</h1>
+                    <p class="subtitle">
+                        Submit and manage your campus-related problems.
+                    </p>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar">👨‍🎓</div>
+                    <div>
+                        <strong>Student</strong>
+                        <span>Campus User</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- STATS -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">📋</div>
+                    <div>
+                        <span>Total Requests</span>
+                        <h2 id="totalRequests">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">⚡</div>
+                    <div>
+                        <span>High Priority</span>
+                        <h2 id="highRequests">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div>
+                        <span>Active Requests</span>
+                        <h2 id="activeRequests">0</h2>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <div class="content-grid">
+
+                <!-- FORM -->
+                <section class="form-card">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="small-title">NEW REQUEST</span>
+                            <h2>Submit a Problem</h2>
+                        </div>
+
+                        <div class="plus">＋</div>
+                    </div>
+
+                    <form id="requestForm">
+
+                        <label>Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="student@example.com"
+                            required
+                        >
+
+                        <div class="two-column">
+
+                            <div>
+                                <label>Category</label>
+
+                                <select id="category" required>
+                                    <option value="">Select category</option>
+                                    <option>Hostel</option>
+                                    <option>Library</option>
+                                    <option>Academic</option>
+                                    <option>Transport</option>
+                                    <option>Infrastructure</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Priority</label>
+
+                                <select id="priority" required>
+                                    <option value="">Select priority</option>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <label>Problem Description</label>
+
+                        <textarea
+                            id="description"
+                            placeholder="Describe your problem..."
+                            required
+                        ></textarea>
+
+                        <button type="submit" id="submitBtn">
+                            Submit Request →
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- REQUESTS -->
+                <section class="requests-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="small-title">RECENT ACTIVITY</span>
+                            <h2>Submitted Requests</h2>
+                        </div>
+
+                        <span class="request-count" id="requestCount">
+                            0 requests
+                        </span>
+
+                    </div>
+
+                    <div id="requestsContainer"></div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
